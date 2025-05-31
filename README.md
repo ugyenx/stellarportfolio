@@ -1,4 +1,4 @@
-# ✨ StellarPortfolio ✨
+# ✨ Stellar Portfolio ✨
 
 ### _Navigating the Digital Cosmos: Your Gateway to Tomorrow's Web._
 
