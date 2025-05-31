@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ugyen | Galactic Coder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Orbitron:wght@400;700&family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body class="antialiased">
+    <div id="loading-screen">
+      <div class="loader-text">INITIALIZING SYSTEMS...</div>
+      <div class="progress-bar-container">
+        <div id="loading-progress-bar" class="progress-bar"></div>
+      </div>
+    </div>
+
+    <div class="starry-sky">
+      <div class="parallax-layer" data-depth="0.1"></div>
+      <div class="parallax-layer" data-depth="0.3"></div>
+      <div class="parallax-layer" data-depth="0.6"></div>
+    </div>
+
+    <header id="main-header" class="py-4">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <nav>
+          <ul class="flex flex-wrap justify-center space-x-4 md:space-x-6">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <button id="music-toggle" aria-label="Toggle Music"></button>
+
+    <main class="pt-20 md:pt-24">
+      <section
+        id="home"
+        class="min-h-screen flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8 relative overflow-hidden fade-in-section"
+      >
+        <div class="absolute inset-0 opacity-20"></div>
+        <div class="relative z-10">
+          <h1
+            id="animated-name"
+            class="font-orbitron text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4"
+          >
+            <span class="neon-text-cyan">UGYEN</span>
+            <span class="neon-text-magenta">DORJI</span>
+          </h1>
+          <p
+            class="font-aldrich text-xl sm:text-2xl md:text-3xl text-gray-300 mb-8 neon-text-cyan opacity-80"
+          >
+            Crafting Code Across Galaxies
+          </p>
+          <a
+            href="#about"
+            class="console-button text-lg py-3 px-8 rounded-lg inline-block"
+          >
+            Explore My Universe &gt;
+          </a>
+        </div>
+        <div
+          class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce"
+        >
+          <svg
+            class="w-8 h-8 text-cyan-400"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </div>
+      </section>
+
+      <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 fade-in-section">
+        <div class="container mx-auto">
+          <h2
+            class="font-orbitron text-4xl sm:text-5xl font-bold text-center mb-12 neon-text-magenta"
+          >
+            About Me
+          </h2>
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="holographic-card p-6 md:p-8 rounded-lg">
+              <h3 class="font-aldrich text-2xl neon-text-cyan mb-4">
+                Greetings, Earthling! (and others)
+              </h3>
+              <p class="mb-4">
+                I'm Ugyen, a passionate developer navigating the vast cosmos of
+                technology. My mission is to build innovative and elegant
+                solutions that push the boundaries of what's possible.
+              </p>
+              <p class="mb-4">
+                With a keen eye for futuristic design and a love for clean,
+                efficient code, I transform complex problems into seamless
+                digital experiences. From the smallest micro-interactions to
+                large-scale system architectures, I strive for excellence in
+                every line of code.
+              </p>
+              <p>
+                When I'm not coding, you might find me stargazing, exploring
+                sci-fi universes, or tinkering with new gadgets from unexplored
+                dimensions.
+              </p>
+            </div>
+            <div
+              class="holographic-card p-6 md:p-8 rounded-lg flex justify-center items-center"
+            >
+              <img
+                src="assests/profile.png"
+                alt="Alex Xenon Avatar Placeholder"
+                class="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover border-2 border-cyan-500 shadow-lg shadow-cyan-500/50"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="skills"
+        class="py-20 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-20 fade-in-section"
+      >
+        <div class="container mx-auto">
+          <h2
+            class="font-orbitron text-4xl sm:text-5xl font-bold text-center mb-12 neon-text-cyan"
+          >
+            My Skill Matrix
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="p-6 rounded-lg holographic-card">
+              <h3 class="font-aldrich text-xl neon-text-magenta mb-3">
+                Quantum JavaScript
+              </h3>
+              <div class="skill-bar-container h-6 rounded-md">
+                <div
+                  class="skill-bar"
+                  data-skill-level="90%"
+                  style="width: 0%"
+                ></div>
+              </div>
+              <p class="text-sm mt-2 text-cyan-300">Mastery: 90%</p>
+            </div>
+            <div class="p-6 rounded-lg holographic-card">
+              <h3 class="font-aldrich text-xl neon-text-magenta mb-3">
+                Nebula CSS & Tailwind
+              </h3>
+              <div class="skill-bar-container h-6 rounded-md">
+                <div
+                  class="skill-bar"
+                  data-skill-level="95%"
+                  style="width: 0%"
+                ></div>
+              </div>
+              <p class="text-sm mt-2 text-cyan-300">Mastery: 95%</p>
+            </div>
+            <div class="p-6 rounded-lg holographic-card">
+              <h3 class="font-aldrich text-xl neon-text-magenta mb-3">
+                Astro React.js
+              </h3>
+              <div class="skill-bar-container h-6 rounded-md">
+                <div
+                  class="skill-bar"
+                  data-skill-level="85%"
+                  style="width: 0%"
+                ></div>
+              </div>
+              <p class="text-sm mt-2 text-cyan-300">Mastery: 85%</p>
+            </div>
+            <div class="p-6 rounded-lg holographic-card">
+              <h3 class="font-aldrich text-xl neon-text-magenta mb-3">
+                Galactic Node.js
+              </h3>
+              <div class="skill-bar-container h-6 rounded-md">
+                <div
+                  class="skill-bar"
+                  data-skill-level="75%"
+                  style="width: 0%"
+                ></div>
+              </div>
+              <p class="text-sm mt-2 text-cyan-300">Mastery: 75%</p>
+            </div>
+            <div class="p-6 rounded-lg holographic-card">
+              <h3 class="font-aldrich text-xl neon-text-magenta mb-3">
+                Cosmic Python
+              </h3>
+              <div class="skill-bar-container h-6 rounded-md">
+                <div
+                  class="skill-bar"
+                  data-skill-level="80%"
+                  style="width: 0%"
+                ></div>
+              </div>
+              <p class="text-sm mt-2 text-cyan-300">Mastery: 80%</p>
+            </div>
+            <div class="p-6 rounded-lg holographic-card">
+              <h3 class="font-aldrich text-xl neon-text-magenta mb-3">
+                Interstellar UI/UX Design
+              </h3>
+              <div class="skill-bar-container h-6 rounded-md">
+                <div
+                  class="skill-bar"
+                  data-skill-level="88%"
+                  style="width: 0%"
+                ></div>
+              </div>
+              <p class="text-sm mt-2 text-cyan-300">Mastery: 88%</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 fade-in-section">
+        <div class="container mx-auto">
+          <h2
+            class="font-orbitron text-4xl sm:text-5xl font-bold text-center mb-12 neon-text-magenta"
+          >
+            My Starship Projects
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="project-card rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+            >
+              <img
+                src="assests/innosphere.png"
+                alt="Project Innoshpere"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="font-aldrich text-2xl neon-text-cyan mb-2">
+                  Project Innoshpere
+                </h3>
+                <p class="text-sm mb-4">
+                  A futuristic e-commerce platform blending cutting-edge UI with
+                  immersive shopping experiences.
+                </p>
+                <a href="#" class="console-button text-sm py-2 px-4 rounded"
+                  >View Details</a
+                >
+              </div>
+            </div>
+            <div
+              class="project-card rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+            >
+              <img
+                src="assests/teambalancer.png"
+                alt="Project TeamBalancer"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="font-aldrich text-2xl neon-text-cyan mb-2">
+                  Project Team Balancer
+                </h3>
+                <p class="text-sm mb-4">
+                  An AI-powered football team balancer that creates fair,
+                  competitive squads in seconds.
+                </p>
+                <a href="#" class="console-button text-sm py-2 px-4 rounded"
+                  >View Details</a
+                >
+              </div>
+            </div>
+            <div
+              class="project-card rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+            >
+              <img
+                src="assests/namshi.png"
+                alt="Project Cygnus"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="font-aldrich text-2xl neon-text-cyan mb-2">
+                  Project Namshi
+                </h3>
+                <p class="text-sm mb-4">
+                  A sleek, next-gen weather app delivering real-time forecasts
+                  through a beautifully futuristic interface.
+                </p>
+                <a href="#" class="console-button text-sm py-2 px-4 rounded"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="py-20 px-4 sm:px-6 lg:px-8 bg-black bg-opacity-20 fade-in-section"
+      >
+        <div class="container mx-auto max-w-2xl">
+          <h2
+            class="font-orbitron text-4xl sm:text-5xl font-bold text-center mb-12 neon-text-cyan"
+          >
+            Transmit Message
+          </h2>
+          <form id="contact-form" class="space-y-6">
+            <div>
+              <label
+                for="name"
+                class="block text-sm font-medium text-cyan-300 mb-1 font-aldrich"
+                >Callsign / Name:</label
+              >
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                class="console-input w-full p-3 rounded-md text-sm"
+                placeholder="e.g., Commander Shepard"
+              />
+            </div>
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-medium text-cyan-300 mb-1 font-aldrich"
+                >Comms Channel / Email:</label
+              >
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                class="console-input w-full p-3 rounded-md text-sm"
+                placeholder="e.g., shepard@normandy.sr"
+              />
+            </div>
+            <div>
+              <label
+                for="subject"
+                class="block text-sm font-medium text-cyan-300 mb-1 font-aldrich"
+                >Subject Transmission:</label
+              >
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                required
+                class="console-input w-full p-3 rounded-md text-sm"
+                placeholder="e.g., Urgent: Reapers Detected"
+              />
+            </div>
+            <div>
+              <label
+                for="message"
+                class="block text-sm font-medium text-cyan-300 mb-1 font-aldrich"
+                >Message Payload:</label
+              >
+              <textarea
+                name="message"
+                id="message"
+                rows="5"
+                required
+                class="console-textarea w-full p-3 rounded-md text-sm"
+                placeholder="Enter your cosmic query or collaboration proposal..."
+              ></textarea>
+            </div>
+            <div>
+              <button
+                type="submit"
+                class="console-button w-full py-3 px-6 rounded-md text-lg font-aldrich"
+              >
+                Send Transmission <span class="ml-2">&gt;_</span>
+              </button>
+            </div>
+          </form>
+          <div id="form-status" class="mt-6 text-center"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="py-8 text-center border-t border-gray-700 border-opacity-50">
+      <p class="text-sm text-gray-400 font-aldrich">
+        &copy; <span id="current-year"></span> Ugyen Dorji. All rights reserved
+        across the known universe.
+      </p>
+      <p class="text-xs text-gray-500 mt-1">Powered by Code & Cosmic Energy</p>
+    </footer>
+  </body>
+</html>
